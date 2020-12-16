@@ -10,7 +10,7 @@ import (
 func Scan() ([]string, error) {
 	files := []string{}
 
-	fmt.Println("Scanning for markdown files...")
+	fmt.Println("Scanning for markdown files...\n")
 
 	err := filepath.Walk("./", func(path string, info os.FileInfo, err error) error {
 		if filepath.Ext(path) == ".md" {

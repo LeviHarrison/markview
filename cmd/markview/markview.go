@@ -14,7 +14,7 @@ func main() {
 
 	files, err := scan.Scan()
 	if err != nil {
-		fmt.Printf("Error scanning for files: %v", err)
+		fmt.Printf("Error scanning for files: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -22,9 +22,9 @@ func main() {
 
 	err = generate.Generate(files)
 	if err != nil {
-		fmt.Printf("Error generating site: %v", err)
+		fmt.Printf("Error generating site: %v\n", err)
 		os.Exit(1)
 	}
 
-	fmt.Printf("Done in %v seconds", time.Now().Sub(start).Seconds())
+	fmt.Printf("Done in %v seconds\n", time.Now().Sub(start).Seconds())
 }
